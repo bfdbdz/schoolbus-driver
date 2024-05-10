@@ -1,0 +1,50 @@
+<!--pages/task/task.wxml-->
+<view class="table-container" wx:if="{{showTask}}">
+	<view class="title">工单选择</view>
+	<view class="table-item {{selected == index ? 'selected' : ''}}" wx:for="{{taskList}}" wx:key="index" data-index="{{index}}" bind:tap="chooseTask">
+		<view class="table-row">
+			<view class="table-title">发车时间：</view>
+			<view class="table-cell">{{item['time']}}</view>
+		</view>
+		<view class="table-row">
+			<view class="table-title">路线：</view>
+			<view class="table-cell">{{item['route']}}</view>
+		</view>
+		<view class="table-row">
+			<view class="table-title">车牌：</view>
+			<view class="table-cell">{{item['licensePlate']}}</view>
+		</view>
+	</view>
+
+<view class="btn" wx:if="{{showBtn}}">
+	<button class="doit" bind:tap="doTask">执行</button>
+	<button class="cancel" bind:tap="cancelTask">取消</button>
+</view>
+
+<view wx:else class="noBtn">
+<text>当前没有需要执行的工单</text>
+</view>
+</view>
+
+<view wx:else>
+<view class="succseeContainer">
+<image class="successImg" src="../../images/getoff-icons/success.png" mode="widthFix"></image>
+<text class="successText">当前执行工单:</text>
+<view class="successTask">
+	<view class="table-row">
+			<view class="table-title">发车时间：</view>
+			<view class="table-cell">{{taskList[selected]['time']}}</view>
+		</view>
+		<view class="table-row">
+			<view class="table-title">路线：</view>
+			<view class="table-cell">{{taskList[selected]['route']}}</view>
+		</view>
+		<view class="table-row">
+			<view class="table-title">车牌：</view>
+			<view class="table-cell">{{taskList[selected]['licensePlate']}}</view>
+		</view>
+
+		<button class="cancel-btn" bind:tap="cancelTask">取消该工单</button>
+</view>
+</view>
+</view>

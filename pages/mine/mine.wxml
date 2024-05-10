@@ -1,0 +1,32 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+	<!-- 头像和名字 -->
+	<view class="profile-header">
+		<image class="avatar" src="../../images/mine_icons/avatar.jpg"></image>
+		<view class="name-wapper">
+			<text class="name">{{userInfo.name}}</text>
+			<text class="username">{{userInfo.username}} 司机</text>
+		</view>
+	</view>
+
+	<view class="choice">
+		<view class="section">
+			<view class="item">
+				<text class="label">手机号</text>
+				<text class="value">{{userInfo.phone}}</text>
+			</view>
+		</view>
+
+		<view class="section">
+			<view class="item" bind:tap="toChangePW">
+				<text class="label">修改密码</text>
+				<image class="img" src="../../images/mine_icons/next.png" mode="aspectFit"></image>
+			</view>
+		</view>
+	</view>
+</view>
+
+<!-- 退出登录 -->
+<view class="out" bindtap="logout">
+	<button class="out-button">退出登录</button>
+</view>

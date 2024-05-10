@@ -1,0 +1,212 @@
+/* pages/register/register.wxss */
+/* .register {
+  width: 100%;
+  height: 100%;
+  background-color:#000000;
+} */
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+.topview {
+	overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 0;
+  left: 0;
+  top: 0;
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-continer {
+  height: auto;
+  width: 600rpx;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+
+.register-text {
+	height: 300rpx;
+	font-size: 60rpx;
+  font-weight: bold;
+  color: #ffffff;
+	display: flex;
+	/* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+}
+
+.register-text-1{
+	padding-top: 120rpx;
+}
+
+
+.register-on {
+  margin-top: 40rpx;
+}
+
+.register-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uni-input-3 {
+  margin-bottom: 20rpx;
+  width: 100%;
+  height: 80rpx;
+  border-bottom: 1px solid #ffffff;
+  font-size: 28rpx;
+  color: #ffffff;
+  padding: 0rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin-bottom: 20rpx;
+  width: 100%;
+  height: 80rpx;
+  border-bottom: 1px solid #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.uni-input-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.uni-input-2 {
+  flex: 1;
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #ffffff;
+}
+
+.uni-icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+
+
+.uni-input-0 {
+  margin-bottom: 20rpx;
+  width: 100%;
+  height: 80rpx;
+  border-bottom: 1px solid #ffffff;
+  font-size: 28rpx;
+  color: #ffffff;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.uni-input-1 {
+  margin-bottom: 20rpx;
+  width: 100%;
+  height: 80rpx;
+  border-bottom: 1px solid #ffffff;
+  font-size: 28rpx;
+  color: #ffffff;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.button {
+  margin-top: 80rpx;
+  display: flex;
+  justify-content: center;
+}
+
+button.register-button {
+  width: 300rpx;
+  height: 80rpx;
+	border: 1px solid #ffffff;
+	color: #ffffff;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox-group{
+  color: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.agreement {
+  width: 600rpx;
+  margin-top: 70rpx;
+  display: inline-block;
+  /* align-items: center; */
+  /* margin-; */
+}
+
+/* .red {
+	white-space: nowrap;
+} */
+
+.checkbox {
+  margin-right: 10rpx;
+}
+
+checkbox.red .wx-checkbox-input,
+	checkbox.red .uni-checkbox-input {
+		border-radius: 50%;
+		border: 1px solid #ffffff;
+		background-color: #00000000;
+	}
+
+	checkbox.red[checked] .wx-checkbox-input,
+	checkbox.red.checked .uni-checkbox-input {
+		background-color: #6587b5 !important;
+		color: #f1f1f1 !important;
+		border-color: #6587b5 !important;
+	}
+
+.agreement-cehckbox-text {
+  font-size: 24rpx;
+  color: #adadad;
+}
+
+.agreement-cehckbox-text-1 {
+  font-size: 24rpx;
+  color: #f1f1f1;
+}
+
+
+.login {
+	margin-bottom: 30rpx;
+  margin-top: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-text {
+  font-size: 28rpx;
+  color: #adadad;
+}
+
+.login-text-1 {
+	font-size: 28rpx;
+	text-decoration: underline solid #6587b5;
+  color: #6587b5;
+}

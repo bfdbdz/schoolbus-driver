@@ -1,0 +1,107 @@
+/* pages/task/task.wxss */
+.table-container{
+	width: 90%;
+	margin: 5%;
+}
+
+.title{
+	font-size: 50rpx;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 5%;
+}
+
+.table-item{
+	padding: 20rpx;
+	border: 1px solid #ddd;
+	border-radius: 20rpx;
+	margin-bottom: 50rpx;
+}
+
+.table-item:active{
+	background-color: rgba(0,0,0,0.05);
+}
+
+.table-item.selected{
+	color: #6587b5;
+	border-color: #6587b5;
+}
+
+.table-row{
+	height: 60rpx;
+	display: flex;
+	align-items: center;
+}
+
+.table-title,
+.table-cell {
+  display: inline-block;
+}
+
+.table-title{
+	font-weight: bold;
+}
+
+.btn{
+	margin-top: 100rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 60rpx;
+}
+
+.noBtn{
+	height: 80vh;
+	font-size: 37rpx;
+	color: rgb(146, 146, 146);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cancel,
+.doit{
+	width:35% !important;
+	background-color: #6587b5;
+	color: white;
+	border-radius: 30rpx;
+}
+
+.cancel:active,
+.doit:active {
+  background-color: #486183;
+}
+
+.succseeContainer{
+	width: 90%;
+	margin: 5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.successImg{
+	width: 30%;
+	margin: 10%;
+}
+
+.successText{
+	font-size: 45rpx;
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
+
+.successTask{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.cancel-btn{
+	margin-top: 120rpx;
+	background-color: #6587b5;
+	color: white;
+	border-radius: 30rpx;
+}

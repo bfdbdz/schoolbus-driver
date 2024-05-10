@@ -1,0 +1,53 @@
+<view class="register">
+	<view class="login-img">
+		<image src="../../images/mine_icons/bus.jpg" mode="aspectFill" class="background"></image>
+	</view>
+	<view class="topview">
+		<view class="register-continer">
+			<view class="register-text">
+				<text class="register-text-1">欢 迎 注 册</text>
+			</view>
+			<form bindsubmit="registerSubmit">
+				<view class="register-on">
+					<view class="register-input">
+						<input class="uni-input-3" focus name="username" placeholder="工号" />
+						<view class="wrapper">
+							<view class="uni-input-wrapper">
+								<input class="uni-input-2" name="password" placeholder="请输入密码" type="{{ showPassword1 ? 'text' : 'password' }}" />
+								<image class="uni-icon" wx:if="{{showPassword1}}" src='../../images/mine_icons/eye-active.png' bindtap="changePassword1" mode="heightFix"></image>
+								<image class="uni-icon" wx:else src='../../images/mine_icons/eye.png' bindtap="changePassword1" mode="heightFix"></image>
+							</view>
+						</view>
+						<view class="wrapper">
+							<view class="uni-input-wrapper">
+								<input class="uni-input-2" name="checkPassword" placeholder="请再次输入密码确认" type="{{ showPassword2 ? 'text' : 'password' }}" />
+								<image class="uni-icon"  wx:if="{{showPassword2}}" src='../../images/mine_icons/eye-active.png' bindtap="changePassword2" mode="heightFix"></image>
+								<image class="uni-icon"  wx:else src='../../images/mine_icons/eye.png' bindtap="changePassword2" mode="heightFix"></image>
+							</view>
+						</view>
+						<input class="uni-input-0" focus name="name" placeholder="姓名" />
+						<input class="uni-input-1" type="tel" focus="true" maxlength="11" name="phone" placeholder="请输入11位手机号" />
+					</view>
+				</view>
+				<view class="button">
+					<button class="register-button" plain="true" form-type="submit">注册</button>
+				</view>
+			</form>
+		</view>
+		<checkbox-group bindchange="checkboxChange">
+			<view class="agreement">
+				<checkbox class="checkbox red" style="transform:scale(0.6)" value="checked">
+				</checkbox>
+				<text class="agreement-cehckbox-text">我已阅读并同意</text>
+				<text class="agreement-cehckbox-text-1">《用户协议》</text>
+				<text class="agreement-cehckbox-text">和</text>
+				<text class="agreement-cehckbox-text-1">《隐私政策指引》</text>
+			</view>
+		</checkbox-group>
+		<view class="login">
+			<text class="login-text">已有账号？去</text>
+			<text class="login-text-1" bindtap="switchSection">登录</text>
+		</view>
+
+	</view>
+</view>

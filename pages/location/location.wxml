@@ -1,0 +1,23 @@
+<!--pages/location/location.wxml-->
+<map class="map" id="myMap" style="width: 100%; height: 100vh;" :latitude="{{latitude}}" :longitude="{{longitude}}" :markers="{{markers}}" scale="16" show-location="true"></map>
+
+
+<view class="float-left">
+	<view class="float-text">等候上车人数</view>
+	<view class="station-container">
+			<view class="station" wx:for="{{onStation}}" wx:key="index" >
+				<view class="stationName">{{item}}：</view>
+				<view class="stationNumber">{{onNumber[item]}}</view>
+			</view>
+		</view>
+</view>
+
+<view class="float-right">
+	<view class="float-text">即将下车人数</view>
+	<view class="station-container">
+			<view class="station" wx:for="{{offStation}}" wx:key="index" >
+				<view class="stationName">{{item}}：</view>
+				<view class="stationNumber">{{offNumber[item]}}</view>
+			</view>
+		</view>
+</view>

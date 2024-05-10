@@ -1,0 +1,47 @@
+<!--pages/login/login.wxml-->
+<view class="login">
+	<view class="login-img">
+		<image src="../../images/mine_icons/bus.jpg" mode="aspectFill" class="background"></image>
+	</view>
+    <view class="topview">
+      <view class="login-continer">
+        <!-- 欢迎登录 -->
+        <view class="login-text">
+          <text class="login-text-1">欢 迎 登 录</text>
+        </view>
+        <!-- 登录输入框 -->
+        <form bindsubmit="loginSubmit">
+          <view class="login-on">
+            <view class="login-input">
+              <input class="uni-input-1" type="number" name="username" placeholder="工号" />
+              <view class="wrapper">
+                <view class="uni-input-wrapper">
+                  <input class="uni-input-2" name="password" placeholder="请输入密码" type="{{ showPassword ? 'text' : 'password' }}"/>
+                  <image class="uni-icon" wx:if="{{showPassword}}" src='../../images/mine_icons/eye-active.png' bindtap="changePassword" mode="heightFix"></image>
+									<image class="uni-icon" wx:else src='../../images/mine_icons/eye.png' bindtap="changePassword" mode="heightFix"></image>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="button">
+            <button class="login-button" plain="true" form-type="submit">登录</button>
+          </view>
+        </form>
+			</view>
+        <checkbox-group bindchange="checkboxChange">
+          <view class="agreement">
+            <checkbox class="checkbox red" style="transform:scale(0.6)" value="checked">
+            </checkbox>
+            <text class="agreement-cehckbox-text">我已阅读并同意</text>
+            <text class="agreement-cehckbox-text-1">《用户协议》</text>
+            <text class="agreement-cehckbox-text">和</text>
+            <text class="agreement-cehckbox-text-1">《隐私政策指引》</text>
+          </view>
+        </checkbox-group>
+        <view class="register">
+          <text class="register-text">还没有账号？去</text>
+          <text class="register-text-1" bindtap="switchSection">注册</text>
+        </view>
+      
+    </view>
+  </view>

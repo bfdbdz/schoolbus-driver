@@ -1,0 +1,103 @@
+/* pages/mine/mine.wxss */
+.container{
+	width: 100%;
+	padding: 40rpx;
+	display: flex;
+  flex-direction: column;
+	align-items: flex-start;
+}
+
+.profile-header{
+	height: 200rpx;
+	left: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.avatar{
+	height: 120rpx;
+	width: 120rpx;
+	border-radius: 50%;
+}
+
+.name-wapper{
+	margin-left: 30rpx;
+	display: flex;
+	flex-direction: column;
+}
+
+.name{
+	font-weight: 550;
+	font-size: 50rpx;
+	margin-bottom: 10rpx;
+}
+
+.username{
+	color: darkgray;
+}
+
+.choice{
+	width: 100%;
+	background-color: rgb(243, 242, 242);
+	border-radius: 30rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section{
+	height:100rpx;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 30rpx;
+}
+
+.section:active{
+	background-color:rgb(218, 218, 218) ;
+}
+
+.item{
+	width: 90%;
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label{
+	font-size: 35rpx;
+	width: 400rpx;
+	color: #000;
+}
+
+.value {
+	color: rgb(163, 163, 163);
+  flex-grow: 1; 
+  text-align: right;
+}
+
+.img{
+	height: 50rpx;
+	width: 50rpx;
+}
+
+.out{
+	position: absolute;
+	bottom: 100rpx;
+	width: 100%;
+}
+
+.out-button{
+	color: rgb(233, 90, 90);
+	font-weight: 300;
+	height: 80rpx;
+	font-size: 30rpx;
+	padding: 10rpx;
+	border-radius: 30rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
