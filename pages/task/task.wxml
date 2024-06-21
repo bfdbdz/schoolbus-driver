@@ -1,7 +1,7 @@
 <!--pages/task/task.wxml-->
 <view class="table-container" wx:if="{{showTask}}">
 	<view class="title">工单选择</view>
-	<view class="table-item {{selected == index ? 'selected' : ''}}" wx:for="{{taskList}}" wx:key="index" data-index="{{index}}" bind:tap="chooseTask">
+	<view class="table-item {{selected == index ? 'selected' : ''}}" hover-class="table-item_active" wx:for="{{taskList}}" wx:key="index" data-index="{{index}}" bind:tap="chooseTask">
 		<view class="table-row">
 			<view class="table-title">发车时间：</view>
 			<view class="table-cell">{{item['time']}}</view>
@@ -17,8 +17,8 @@
 	</view>
 
 <view class="btn" wx:if="{{showBtn}}">
-	<button class="doit" bind:tap="doTask">执行</button>
-	<button class="cancel" bind:tap="cancelTask">取消</button>
+	<button class="doit" hover-class="doit_active" bind:tap="doTask">执行</button>
+	<button class="cancel" hover-class="cancel_active" bind:tap="cancelTask">取消</button>
 </view>
 
 <view wx:else class="noBtn">

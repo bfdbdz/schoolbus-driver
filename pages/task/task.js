@@ -10,7 +10,7 @@ Page({
 		selected: null,
 		taskList: [],
 		showTask: true,
-		showBtn:Boolean
+		showBtn: Boolean
 	},
 
 	/**
@@ -23,7 +23,7 @@ Page({
 	getTask() {
 		return new Promise((resolve, reject) => {
 			wx.request({
-				url: 'http://192.168.74.155:8080/driver/task',
+				url: 'http://localhost:8080/driver/task',
 				method: 'GET',
 				header: {
 					'content-type': 'application/json',
@@ -72,17 +72,17 @@ Page({
 		}
 	},
 
-	checkBtn(){
-		if(JSON.stringify(this.data.taskList) !=="[]"){
+	checkBtn() {
+		if (JSON.stringify(this.data.taskList) !== "[]") {
 			this.setData({
-				showBtn:true
+				showBtn: true
 			})
-		}else{
+		} else {
 			this.setData({
-				showBtn:false
+				showBtn: false
 			})
 		}
-		console.log("显示按钮",this.data.showBtn)
+		console.log("显示按钮", this.data.showBtn)
 	},
 
 	chooseTask(e) {
@@ -107,7 +107,7 @@ Page({
 			console.log("选择执行的工单", choice)
 			let id = choice['id']
 			wx.request({
-				url: 'http://192.168.74.155:8080/driver/task/' + id,
+				url: 'http://localhost:8080/driver/task/' + id,
 				method: 'PUT',
 				header: {
 					'content-type': 'application/json',
@@ -143,7 +143,7 @@ Page({
 	//获取最新的司机信息，包括路线、
 	getDriverInfo() {
 		wx.request({
-			url: 'http://192.168.74.155:8080/driver/current',
+			url: 'http://localhost:8080/driver/current',
 			method: 'GET',
 			header: {
 				'content-type': 'application/json',
@@ -197,7 +197,7 @@ Page({
 			console.log("选择执行的工单", choice)
 			let id = choice['id']
 			wx.request({
-				url: 'http://192.168.74.155:8080/driver/task/cancel/' + id,
+				url: 'http://localhost:8080/driver/task/cancel/' + id,
 				method: 'PUT',
 				header: {
 					'content-type': 'application/json',
@@ -282,10 +282,14 @@ Page({
 	 * 页面相关事件处理函数--监听用户下拉动作
 	 */
 	onPullDownRefresh() {
-		this.getTask().then(() => {
-			// 数据获取成功后停止下拉刷新动画
-			wx.stopPullDownRefresh();
-		});
+		if (this.data.showTask == true) {
+			this.getTask().then(() => {
+				// 数据获取成功后停止下拉刷新动画
+				wx.stopPullDownRefresh();
+			});
+		} else {
+			wx.stopPullDownRefresh()
+		}
 	},
 
 	/**

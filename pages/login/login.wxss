@@ -11,6 +11,7 @@
 
 .topview {
 	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -77,55 +78,6 @@
 	height: 50rpx;
 	width: 50rpx;
 }
-
-/* .uni-list {
-	margin-top: 60rpx;
-	width: 100%;
-	border-bottom: 1px solid #ffffff;
-}
-
-.uni-list-cell {
-	display: flex;
-	align-items: center;
-	height: 80rpx;
-	font-size: 35rpx;
-	padding: 0 20rpx;
-	color: #ffffff;
-}
-
-.uni-list-cell-left {
-	margin-right: 20rpx;
-}
-
-.uni-list-cell-db {
-	display: flex;
-	align-items: center;
-	flex: 1;
-}
-
-.uni-list-cell {
-	flex: 1;
-	display: flex;
-	align-items: center;
-}
-
-.uni-input-4 {
-	margin-left: 10rpx;
-}
-
-radio.round .wx-radio-input,
-radio.round .uni-radio-input {
-	border-radius: 50%;
-	border: 1px solid #ffffff;
-	background-color: #00000000;
-}
-
-radio.round[checked] .wx-radio-input,
-radio.round.checked .uni-radio-input {
-	background-color: #6587b5 !important;
-	color: #ffffff !important;
-	border-color: #6587b5 !important;
-} */
 
 .button {
 	display: flex;

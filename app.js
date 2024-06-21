@@ -106,13 +106,13 @@ App({
 		if (this.globalData.userInfo.userInfo) {
 			var id = this.globalData.userInfo.userInfo.id
 			this.socketTask = wx.connectSocket({
-				url: 'ws://192.168.74.155:8080/ws/driver' + '_' + id,
+				url: 'ws://localhost:8080/ws/driver' + '_' + id,
 				header: {
 					'content-type': 'application/json'
 				},
 				method: 'GET'
 			})
-			console.log("wsURL", 'wss://192.168.74.155:8080/ws/driver' + '_' + id)
+			console.log("wsURL", 'wss://localhost:8080/ws/driver' + '_' + id)
 		}
 
 		this.socketTask.onOpen(function () {

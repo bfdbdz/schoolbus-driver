@@ -10,14 +10,14 @@
 	</view>
 
 	<view class="choice">
-		<view class="section">
+		<view class="section" >
 			<view class="item">
 				<text class="label">手机号</text>
 				<text class="value">{{userInfo.phone}}</text>
 			</view>
 		</view>
 
-		<view class="section">
+		<view class="section" hover-class="section_active">
 			<view class="item" bind:tap="toChangePW">
 				<text class="label">修改密码</text>
 				<image class="img" src="../../images/mine_icons/next.png" mode="aspectFit"></image>

@@ -16,6 +16,7 @@
 
 .topview {
 	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -37,7 +38,8 @@
 }
 
 .register-text {
-	height: 300rpx;
+	/* height: 300rpx; */
+	margin-top: 0rpx;
 	font-size: 60rpx;
   font-weight: bold;
   color: #ffffff;
@@ -48,7 +50,7 @@
 }
 
 .register-text-1{
-	padding-top: 120rpx;
+	padding-bottom: 60rpx;
 }
 
 
@@ -194,7 +196,7 @@ checkbox.red .wx-checkbox-input,
 
 .login {
 	margin-bottom: 30rpx;
-  margin-top: 40rpx;
+  margin-top: 60rpx;
   display: flex;
   justify-content: center;
   align-items: center;

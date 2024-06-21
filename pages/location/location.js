@@ -9,7 +9,7 @@ Page({
 	data: {
 		latitude: 0,
 		longitude: 0,
-		speed: 0,
+		// speed: 0,
 		markers: [],
 		currentTime: '',
 		onNumber: {},
@@ -97,7 +97,7 @@ Page({
 				this.setData({
 					latitude: res.latitude,
 					longitude: res.longitude,
-					speed: res.speed,
+					// speed: res.speed,
 					markers: [{
 						id: 0,
 						latitude: res.latitude,
@@ -108,7 +108,7 @@ Page({
 				})
 				console.log("纬度", this.data.latitude)
 				console.log("经度", this.data.longitude)
-				console.log("速度", this.data.speed)
+				// console.log("速度", this.data.speed)
 				console.log("markers", this.data.markers)
 				this.moveMapToCenter()
 				//如果司机信息已经更新，开始上传速度和位置
@@ -136,7 +136,7 @@ Page({
 	// 上传用户定位和速度
 	uploadLocationAndSpeed(latitude, longitude, speed, time) {
 		wx.request({
-			url: 'http://192.168.74.155:8080/driver/location',
+			url: 'http://localhost:8080/driver/location',
 			header: {
 				'Authorization': app.globalData.userInfo.userInfo.token
 			},
@@ -209,7 +209,7 @@ Page({
 	//获取下车人数
 	getOffNumber() {
 		wx.request({
-			url: 'http://192.168.74.155:8080/driver/route/getoff',
+			url: 'http://localhost:8080/driver/route/getoff',
 			method: 'GET',
 			header: {
 				'Authorization': app.globalData.userInfo.userInfo.token
@@ -262,7 +262,7 @@ Page({
 	//获取上车人数
 	getOnNumber() {
 		wx.request({
-			url: 'http://192.168.74.155:8080/driver/route/geton',
+			url: 'http://localhost:8080/driver/route/geton',
 			method: 'GET',
 			header: {
 				'Authorization': app.globalData.userInfo.userInfo.token

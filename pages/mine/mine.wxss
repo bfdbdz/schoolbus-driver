@@ -56,7 +56,7 @@
 	border-radius: 30rpx;
 }
 
-.section:active{
+.section_active{
 	background-color:rgb(218, 218, 218) ;
 }
 

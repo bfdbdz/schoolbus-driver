@@ -20,7 +20,7 @@ Page({
 	passwordSubmit: function (e) {
 		console.log("提交的数据", e.detail.value)
 		wx.request({
-			url: 'http://192.168.74.155:8080/driver/password',
+			url: 'http://localhost:8080/driver/password',
 			method: 'PUT',
 			data: {
 				oldPassword: e.detail.value.oldPassword,
